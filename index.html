@@ -398,6 +398,9 @@
       </tbody>
     </table>
     <script>
+      function call(phone) {
+        window.location.href = 'tel:' + phone;
+      }
       function downloadVCard(name, phone, email) {
         // Remove any leading numbers and dots from name for vCard
         var cleanName = name.replace(/^[0-9]+\.\s*/, '');
