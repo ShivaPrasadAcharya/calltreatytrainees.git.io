@@ -400,18 +400,19 @@
     <script>
       function downloadVCard(name, phone, email) {
         // Remove any leading numbers and dots from name for vCard
-        var cleanName = name.replace(/^\d+\.\s*/, '');
+        var cleanName = name.replace(/^[0-9]+\.\s*/, '');
+        var fullName = cleanName + ' (Treaty Trainee 2082)';
         var vCard =
           "BEGIN:VCARD\n" +
           "VERSION:3.0\n" +
-          "FN:" + cleanName + "\n" +
+          "FN:" + fullName + "\n" +
           "TEL;TYPE=CELL:+977" + phone.replace(/^\+?977/, '') + "\n" +
           (email ? "EMAIL:" + email + "\n" : "") +
           "END:VCARD";
         var blob = new Blob([vCard], { type: "text/vcard" });
         var link = document.createElement("a");
         link.href = window.URL.createObjectURL(blob);
-        link.download = cleanName + ".vcf";
+        link.download = fullName + ".vcf";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
