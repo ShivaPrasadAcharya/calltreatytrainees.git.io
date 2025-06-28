@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+      padding: 0;
+      margin: 0;
+      background-color: #f2f2f2;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-top: 0;
+    }
+
+    tr:hover {
+      background-color: #f5f5f5;
+    }
+
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: blue;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btn1 {
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: blue;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btn2 {
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: indigo;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btn:hover,
+    .btn1:hover,
+    .btn2:hover {
+      background-color: green;
+    }
+
+    #developedby {
+      font-style: italic;
+      color: brown;
+      text-align: right;
+    }
+
+    #search::placeholder {
+      color: #999;
+    }
+
+    .fixedtop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      z-index: 9999;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    #contacts {
+      margin-top: 60px;
+      overflow-y: auto;
+      height: calc(100vh - 60px);
+      box-sizing: border-box;
+      padding: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    #search {
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 18px;
+      margin-bottom: 10px;
+      text-align: left;
+      background-color: yellow;
+    }
+
+    .comment-box-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    #comment {
+      width: 100%;
+      box-sizing: border-box;
+      padding-right: 40px;
+      /* Space for the arrow button */
+    }
+
+    .send-arrow {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      font-size: 24px;
+      color: #007BFF;
+    }
+
+    .link-container {
+      position: fixed;
+      bottom: 90%;
+      left: 0;
+      right: 0;
+      text-align: bottom;
+    }
+
+    /* Style for the links */
+    .link-container a {
+      color: red;
+      text-decoration: none;
+      display: inline-block;
+      margin-right: 20px;
+      font-size: normal;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="fixedtop">
+    <center><b><u> Trainees of Treaty Training (2082)</u></b> </center>
+    <p id="developedby"><b>-</b>शिवप्रसादआचार्येण निर्मितानि
+    </p>
+
+    <input type="text"
+      id="search"
+      onkeyup="searchFunction()"
+      placeholder="अन्वेषिका...&#x1F50D;">
+  </div><br><br><br><br><br>
+  <div id="contacts">
+    <table>
+      <thead>
+        <a id="top"></a>
+        <tr>
+          <th>Name</th>
+          <th><a href="tel:+977 Contact no."><b>Contact No.</b> <br><button class="btn"
+                onclick="call('+977 Contact no.')">Call</button></a></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1. Shri Aastha Lamsal<br>श्री आस्था लम्साल<br>उपसचिव, कानून, न्याय तथा संसदीय मामिला
+            मन्त्रालय<br>Lamsalaasthal@gmail.com</td>
+          <td><a href="tel:+9779843015959">9843015959<br><button class="btn1"
+                onclick="call('+9779843015959')">Call</button></a></td>
+        </tr>
+        <tr>
+          <td>2. Shri Adwait Baral<br>श्री अद्वैत बराल<br>शाखा अधिकृत, कानून, न्याय तथा संसदीय मामिला
+            मन्त्रालय<br>adwait.baral1995@gmail.com</td>
+          <td><a href="tel:+9779443413500">9443413500<br><button class="btn1"
+                onclick="call('+9779443413500')">Call</button></a></td>
+        </tr>
+        <tr>
+          <td>3. Shri Anuja Datta<br>श्री अनुजा दत्त<br>शाखा अधिकृत, कानून, न्याय तथा संसदीय मामिला
+            मन्त्रालय<br>me.anujasut@gmail.com</td>
+          <td><a href="tel:+9779844029757">9844029757<br><button class="btn1"
+                onclick="call('+9779844029757')">Call</button></a></td>
+        </tr>
+        <tr>
+          <td>4. Shri Ashu Basnet<br>श्री एशु बस्नेत<br>शाखा अधिकृत, परराष्ट्र मन्त्रालय<br>basnetaashu@gmail.com</td>
+          <td><a href="tel:+9779841905473">9841905473<br><button class="btn1"
+                onclick="call('+9779841905473')">Call</button></a></td>
+        </tr>
+        <tr>
+          <td>5. Shri Bhawana Barnawal<br>श्री भावना वर्णवाल<br>शाखा अधिकृत, कानून, न्याय तथा संसदीय मामिला
+            मन्त्रालय<br>bhawanabarnawal@gmail.com</td>
+          <td><a href="tel:+9779845310077">9845310077<br><button class="btn1"
+                onclick="call('+9779845310077')">Call</button></a></td>
+        </tr>
+        <tr>
+          <td>6. Shri Bhuminanda Khanal<br>श्री भूमिनन्द खनाल<br>उपसचिव, कानून, न्याय तथा संसदीय मामिला
+            मन्त्रालय<br>khanalbhumi@gmail.com</td>
+          <td><a href="tel:+9779841304983">9841304983<br><button class="btn1"
+                onclick="call('+9779841304983')">Call</button></a></td>
+        </tr>
+        <tr>
+          <td>7. Shri Biswadip Besra<br>श्री विश्वदीप बेस्रा<br>उपसचिव, कानून, न्याय तथा संसदीय मामिला
+            मन्त्रालय<br>biswadipbesra@gmail.com</td>
+          <td><a href="tel:+9779849655612">9849655612<br><button class="btn1"
+                onclick="call('+9779849655612')">Call</button></a></td>
+        </tr>
+        <tr>
+          <td>8. Shri Chhabilal Poudel<br>श्री छविलाल पौडेल<br>उपसचिव, गृह मन्त्रालय<br>moha.chhabipdl@gmail.com</td>
+          <td><a href="tel:+9779851296633">9851296633<br><button class="btn1"
+                onclick="call('+9779851296633')">Call</button></a></td>
+        </tr>
+        <tr>
+          <td>9. Shri Deepa Bali<br>श्री दीपा बली<br>उपसचिव, वन तथा वातावरण मन्त्रालय<br>dpaolichhetri@gmail.com</td>
+          <td><a href="tel:+9779851271123">9851271123<br><button class="btn1"
+                onclick="call('+9779851271123')">Call</button></a></td>
+        </tr>
+        <tr>
+          <td>10. Shri Deepshikha Wagle<br>श्री दिपशिखा वाग्ले<br>शाखा अधिकृत, कानून, न्याय तथा संसदीय मामिला
+            मन्त्रालय<br>deepshikhawagle@gmail.com</td>
+          <td><a href="tel:+9779849997474">9849997474<br><button class="btn1"
+                onclick="call('+9779849997474')">Call</button></a></td>
+        </tr>
+        <tr>
+          <td>11. Shri Hari Krishna K.C.<br>श्री हरिकृष्ण के. सी.<br>उपसचिव, कानून, न्याय तथा संसदीय मामिला
+            मन्त्रालय<br>Hari7kc@gmail.com</td>
+          <td><a href="tel:+9779841411908">9841411908<br><button class="btn1"
+                onclick="call('+9779841411908')">Call</button></a></td>
+        </tr>
+        <tr>
+          <td>12. Shri Hom Prasad Parajuli<br>श्री होम प्रसाद पराजुली<br>शाखा अधिकृत, अर्थ
+            मन्त्रालय<br>homparajuli2@gmail.com</td>
+          <td><a href="tel:+9779844694491">9844694491<br><button class="btn1"
+                onclick="call('+9779844694491')">Call</button></a></td>
+        </tr>
+        <tr>
+          <td>13. Shri Humawati Dhakal<br>श्री हुमावती ढकाल<br>शाखा अधिकृत, कानून, न्याय तथा संसदीय मामिला
+            मन्त्रालय<br>humawatidhakal@gmail.com</td>
+          <td><a href="tel:+9779849870373">9849870373<br><button class="btn1"
+                onclick="call('+9779849870373')">Call</button></a></td>
+        </tr>
+        <tr>
+          <td>14. Shri Ishwari Prasad Acharya<br>श्री ईश्वरीप्रसाद आचार्य<br>उपसचिव, कानून, न्याय तथा संसदीय मामिला
+            मन्त्रालय<br>acharyaishwariprasad@gmail.com</td>
+          <td><a href="tel:+9779847107362">9847107362<br><button class="btn1"
+                onclick="call('+9779847107362')">Call</button></a></td>
+        </tr>
+        <tr>
+          <td>15. Shri Khimanand Gyanwali<br>श्री खिमानन्द ज्ञवाली<br>उपसचिव, ऊर्जा, जलस्रोत तथा सिंचाइ
+            मन्त्रालय<br>Khemgyawali123@gmail.com</td>
+          <td><a href="tel:+9779860776051">9860776051<br><button class="btn1"
+                onclick="call('+9779860776051')">Call</button></a></td>
+        </tr>
+        <tr>
+          <td>16. Shri Kusum Pant<br>श्री कुसुम पन्त<br>शाखा अधिकृत, परराष्ट्र मन्त्रालय<br>kusumpanta82@gmail.com</td>
+          <td><a href="tel:+9779808897948">9808897948<br><button class="btn1"
+                onclick="call('+9779808897948')">Call</button></a></td>
+        </tr>
+        <tr>
+          <td>17. Shri Laxmi Sharma<br>श्री लक्ष्मी शर्मा<br>उपसचिव, शहरी विकास मन्त्रालय<br>Lslaxmi09@gmail.com</td>
+          <td><a href="tel:+9779841712880">9841712880<br><button class="btn1"
+                onclick="call('+9779841712880')">Call</button></a></td>
+        </tr>
+        <tr>
+          <td>18. Shri Lokhari Kandel<br>श्री लोकहरी कडेल<br>उपसचिव, कानून, न्याय तथा संसदीय मामिला
+            मन्त्रालय<br>kandellhari@gmail.com</td>
+          <td><a href="tel:+9779841299063">9841299063<br><button class="btn1"
+                onclick="call('+9779841299063')">Call</button></a></td>
+        </tr>
+        <tr>
+          <td>19. Shri Milan Bhattarai<br>श्री मिलन भट्टराई<br>उपसचिव, महिला, बालबालिका तथा ज्येष्ठ नागरिक
+            मन्त्रालय<br>m.bhattarai012@gmail.com</td>
+          <td><a href="tel:+9779851009287">9851009287<br><button class="btn1"
+                onclick="call('+9779851009287')">Call</button></a></td>
+        </tr>
+        <tr>
+          <td>20. Shri Nira Giri<br>श्री निरा गिरी<br>शाखा अधिकृत, कानून, न्याय तथा संसदीय मामिला
+            मन्त्रालय<br>neeragiri2016@gmail.com</td>
+          <td><a href="tel:+9779808091767">9808091767<br><button class="btn1"
+                onclick="call('+9779808091767')">Call</button></a></td>
+        </tr>
+        <tr>
+          <td>21. Shri Nirmala Thapa<br>श्री निर्मला थापा<br>सञ्चार तथा सूचना प्रविधि
+            मन्त्रालय<br>nirvikthapa4@gmail.com</td>
+          <td><a href="tel:+9779849164623">9849164623<br><button class="btn1"
+                onclick="call('+9779849164623')">Call</button></a></td>
+        </tr>
+        <tr>
+          <td>22. Shri Prabhat Kshetri<br>श्री प्रभात क्षेत्री<br>उपन्यायाधिवक्ता, महान्यायाधिवक्ताको
+            कार्यालय<br>prabhatchhetri7@gmail.com</td>
+          <td><a href="tel:+9779860453191">9860453191<br><button class="btn1"
+                onclick="call('+9779860453191')">Call</button></a></td>
+        </tr>
+        <tr>
+          <td>23. Shri Prakash Neupane<br>श्री प्रकाश न्यौपाने<br>उपसचिव, कानून, न्याय तथा संसदीय मामिला
+            मन्त्रालय<br>prakashachhami@gmail.com</td>
+          <td><a href="tel:+9779849155012">9849155012<br><button class="btn1"
+                onclick="call('+9779849155012')">Call</button></a></td>
+        </tr>
+        <tr>
+          <td>24. Shri Ramesh Prasad Poudel<br>श्री रमेश प्रसाद पौडेल<br>सि.डि.ई., भौतिक पूर्वाधार तथा यातायात
+            मन्त्रालय<br>rameshppoudel@gmail.com</td>
+          <td><a href="tel:+9779841822260">9841822260<br><button class="btn1"
+                onclick="call('+9779841822260')">Call</button></a></td>
+        </tr>
+        <tr>
+          <td>25. Shri Shiva Prasad Acharya<br>श्री शिवप्रसाद आचार्य<br>इजलास अधिकृत, सर्वोच्च
+            अदालत<br>spacharya43@gmail.com</td>
+          <td><a href="tel:+9779849667879">9849667879<br><button class="btn1"
+                onclick="call('+9779849667879')">Call</button></a></td>
+        </tr>
+        <tr>
+          <td>26. Shri Supriya Silwal<br>श्री सुप्रिया सिलवाल<br>शाखा अधिकृत, कानून, न्याय तथा संसदीय मामिला
+            मन्त्रालय<br>silwalsupriya@gmail.com</td>
+          <td><a href="tel:+9779849063851">9849063851<br><button class="btn1"
+                onclick="call('+9779849063851')">Call</button></a></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+  <script>
+    function searchFunction() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("search");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("contacts");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            td = tr[i].getElementsByTagName("td")[1];
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+      }
+    }
+    //to make content not to pass over fixed top on scrolling//
+
+    window.addEventListener("scroll", function () {
+      var fixedTop = document.querySelector(".fixedtop");
+      var contacts = document.querySelector("#contacts");
+      if (window.pageYOffset >= fixedTop.offsetHeight) {
+        contacts.style.marginTop = fixedTop.offsetHeight + "px";
+      } else {
+        contacts.style.marginTop = "20px";
+      }
+    });
+
+    window.addEventListener("scroll", function () {
+      var fixedTop = document.querySelector(".fixedtop");
+      var contacts = document.querySelector("#contacts");
+      if (window.pageYOffset >= fixedTop.offsetHeight) {
+        contacts.style.marginTop = fixedTop.offsetHeight + "px";
+      } else {
+        contacts.style.marginTop = "60px";
+      }
+    });
+
+
+
+  </script>
+</body>
+<footer>
+  <center><b>-भवतु सब्ब मङ्गलम्-</b> </center>
+  <p id="developedby"><u><b>Developed By:</b></u><br> शिवप्रसाद आचार्य
+    <br> २०८२, असार १५ <br>स्रोतः न्यायसेवातालिमकेन्द्र, हाजिरी कागज
+  </p>
+</footer>
+
+</html>
